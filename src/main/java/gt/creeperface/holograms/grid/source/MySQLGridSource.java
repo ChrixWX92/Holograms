@@ -29,6 +29,7 @@ public class MySQLGridSource extends AbstractGridSource<String> {
 
     @Override
     public void load(int offset, int limit) {
+        /*
         try (Connection con = MySQLManager.createConnection()) {
             @Cleanup PreparedStatement statement = con.prepareStatement("SELECT * FROM " + table + " LIMIT ? OFFSET ?");
             statement.setInt(1, limit);
@@ -63,7 +64,7 @@ public class MySQLGridSource extends AbstractGridSource<String> {
             this.load(rows);
         } catch (SQLException e) {
             MainLogger.getLogger().logException(e);
-        }
+        }*/
     }
 
     private boolean loadColumn(String column) {
