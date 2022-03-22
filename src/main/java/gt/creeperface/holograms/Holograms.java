@@ -292,6 +292,7 @@ public class Holograms extends HologramAPI implements Listener {
     }
 
     private void loadOldData(Config config) {
+        /*
         Map<String, Hologram> map = new HashMap<>();
         ConfigSection holograms = config.getSection("holograms");
 
@@ -320,6 +321,7 @@ public class Holograms extends HologramAPI implements Listener {
         }
 
         saveHolograms(false);
+        */
     }
 
     @EventHandler
