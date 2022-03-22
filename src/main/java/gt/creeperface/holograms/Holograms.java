@@ -119,6 +119,7 @@ public class Holograms extends HologramAPI implements Listener {
         getServer().getPluginManager().addPermission(new Permission("hologram.use", "Main holograms permission"));
 
         getServer().getPluginManager().registerEvents(this, this);
+
         getServer().getScheduler().scheduleDelayedRepeatingTask(
                 this,
                 () -> saveHolograms(true),
@@ -139,6 +140,7 @@ public class Holograms extends HologramAPI implements Listener {
             }
         }, 1);
 
+        getLogger().info("Hologram Loading disabled.");
         //getLogger().info("Loading holograms");
         //reloadHolograms();
 
@@ -149,14 +151,16 @@ public class Holograms extends HologramAPI implements Listener {
 
     @Override
     public void onDisable() {
+        /*
         saveHolograms(false);
 
         if (hologramUpdater.isAlive()) {
             hologramUpdater.interrupt();
-        }
+        }*/
     }
 
     private void saveHolograms(boolean async) {
+        /*
         Config config = new Config(path, Config.YAML);
 
         ConfigSection holograms = new ConfigSection();

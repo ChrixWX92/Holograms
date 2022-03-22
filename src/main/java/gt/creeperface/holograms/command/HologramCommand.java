@@ -70,12 +70,12 @@ public class HologramCommand extends Command {
                 plugin.getManager().addMainWindow(p, entity);
                 break;
             case "update":
-                this.plugin.getServer().getScheduler().scheduleAsyncTask(new AsyncTask() {
-                    @Override
-                    public void onRun() {
-                        plugin.reloadHolograms();
-                    }
-                });
+                //this.plugin.getServer().getScheduler().scheduleAsyncTask(new AsyncTask() {
+                //    @Override
+                //    public void onRun() {
+                //        plugin.reloadHolograms();
+                //    }
+                //});
                 break;
             default:
                 String hologramId = args[0].toLowerCase();
