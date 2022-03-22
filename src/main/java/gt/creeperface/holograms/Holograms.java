@@ -139,8 +139,8 @@ public class Holograms extends HologramAPI implements Listener {
             }
         }, 1);
 
-        getLogger().info("Loading holograms");
-        reloadHolograms();
+        //getLogger().info("Loading holograms");
+        //reloadHolograms();
 
         hologramUpdater.start();
 
