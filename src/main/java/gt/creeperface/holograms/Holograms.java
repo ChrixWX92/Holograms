@@ -102,8 +102,8 @@ public class Holograms extends HologramAPI implements Listener {
         checkConfig();
         this.configuration = new HologramConfiguration(this);
 
-        saveResource("holograms.yml");
-        path = new File(getDataFolder(), "holograms.yml");
+        //saveResource("holograms.yml");
+        //path = new File(getDataFolder(), "holograms.yml");
 
         getLogger().info("Loading placeholders");
         initPlaceholderAdapter();
@@ -120,14 +120,14 @@ public class Holograms extends HologramAPI implements Listener {
 
         getServer().getPluginManager().registerEvents(this, this);
 
-        getServer().getScheduler().scheduleDelayedRepeatingTask(
+        /*getServer().getScheduler().scheduleDelayedRepeatingTask(
                 this,
                 () -> saveHolograms(true),
                 this.configuration.getSaveInterval() * 60 * 20,
                 this.configuration.getSaveInterval() * 60 * 20
-        );
+        );*/
 
-        getServer().getScheduler().scheduleRepeatingTask(this, new Task() {
+        /*getServer().getScheduler().scheduleRepeatingTask(this, new Task() {
             @Override
             public void onRun(int tick) {
                 for (Hologram hologram : updateHolograms.values()) {
@@ -138,7 +138,7 @@ public class Holograms extends HologramAPI implements Listener {
                     }
                 }
             }
-        }, 1);
+        }, 1);*/
 
         getLogger().info("Hologram Loading disabled.");
         //getLogger().info("Loading holograms");
